@@ -146,7 +146,7 @@ body {
 
 
 
-.zyyo-filter {
+/* .zyyo-filter {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -155,6 +155,23 @@ body {
     -webkit-backdrop-filter: blur(var(--back_filter));
     z-index: -99999999;
    
+} */
+
+.zyyo-filter {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    
+    /* ↓↓↓↓↓↓ 修改这里开始 ↓↓↓↓↓↓ */
+    /* 1. 把背景色改为完全透明 (如果你觉得图片太亮看不清字，可以改成 rgba(0,0,0,0.3) ) */
+    background: rgba(0, 0, 0, 0.3); 
+    
+    /* 2. 把模糊像素强制改为 0px (这就是清晰度的关键！) */
+    backdrop-filter: blur(0px) !important;
+    -webkit-backdrop-filter: blur(0px) !important;
+    /* ↑↑↑↑↑↑ 修改这里结束 ↑↑↑↑↑↑ */
+
+    z-index: -99999999;
 }
 
 .zyyo-main {
